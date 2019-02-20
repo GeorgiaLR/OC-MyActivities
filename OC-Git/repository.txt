@@ -1,0 +1,2 @@
+Pour la réalisation de cet exercice, un repository Github a été créé à part :
+https://github.com/GeorgiaLR/exo-firstrepo

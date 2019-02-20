@@ -1,0 +1,25 @@
+Training : https://openclassrooms.com/fr/courses/3449001-utilisez-des-api-rest-dans-vos-projets-web
+
+Envoi des données pour créer un fichier audio (voix par défaut, format ogg par défaut)
+IBM Bluemix Text-to-Speech 
+
+curl -X POST -u "apikey:xxxxxx" 
+--header "Content-Type: application/json" 
+--data "{\"text\": \"Hello world I am watson\"}" 
+--output exercise.ogg "https://gateway-syd.watsonplatform.net/text-to-speech/api/v1/synthesize"
+
+
+Envoi des données pour créer un fichier audio (voix française, format ogg par défaut)
+IBM Bluemix Text-to-Speech 
+
+curl -X POST -u "apikey:xxxxxxx" 
+--header "Content-Type: application/json" 
+--data "{\"text\": \"Bonjour le monde je suis la voix pour vous aider\"}" 
+--output exercisefr.ogg "https://gateway-syd.watsonplatform.net/text-to-speech/api/v1/synthesize?voice=fr-FR_ReneeVoice"
+
+Envoi des données pour afficher le texte d'un fichier audio (audio fr)
+IBM Bluemix Speech-to-text
+
+curl -X POST -u "apikey:xxxxxxx" 
+--header "Content-Type: audio/ogg" 
+--data-binary @"path/exercisefr.ogg" "https://gateway-syd.watsonplatform.net/speech-to-text/api/v1/recognize?model=fr-FR_BroadbandModel"
