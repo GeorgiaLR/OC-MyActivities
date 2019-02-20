@@ -1,0 +1,35 @@
+@font-face {
+    font-family: 'PoliceCV';
+    src: url('Quicksand-Light.otf');
+}
+
+body {
+    font-family: 'PoliceCV', Arial, serif;
+}
+
+.mycv {
+    height: 800px;
+    width: 700px;
+    margin:30px;
+    padding-top:30px;
+    padding-left: 15px;
+    padding-right: 15px;
+    background-image: url('wallpaper.png');
+    background-attachment: fixed;
+    background-repeat: no-repeat;
+    border:1px solid #8decc4;
+}
+
+.headcv {
+    text-align: center;
+    margin-bottom:45px;
+}
+
+.photocv {
+    float: right;
+}
+
+h2 {
+    color:#21be7d;
+    text-shadow: 1px 3px 1px #8decc4;
+}
