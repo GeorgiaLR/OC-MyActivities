@@ -1,0 +1,66 @@
+@font-face {
+    font-family: 'PoliceCV';
+    src: url('Quicksand-Light.otf');
+}
+
+body {
+    font-family: 'PoliceCV', Arial, serif;
+}
+
+.mycv {
+    margin:30px;
+    background-image: url('wallpaper.png');
+    background-attachment: fixed;
+    background-repeat: no-repeat;
+    border:1px solid #8decc4;
+    display:flex;
+    flex-wrap: nowrap;
+}
+
+section {
+    display:flex;
+    flex-direction: column;
+    padding:15px;
+}
+
+header {
+    text-align: center;
+    margin-bottom:25px;
+}
+
+article{
+    display:flex;
+    justify-content: space-around;
+}
+
+aside {
+    width: 20%;
+    background-color: #21be7d;
+}   
+
+.photocv {
+    float: right;
+}
+
+h1 {
+    font-size:  25px;
+}
+
+h2 {
+    color:#21be7d;
+    text-shadow: 1px 3px 1px #8decc4;
+}
+
+
+@media all and (max-device-width: 480px)
+{
+    aside {
+        display:none;
+    }   
+    
+    article{
+        display:flex;
+        flex-direction: column;
+    }
+
+}
