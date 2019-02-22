@@ -16,7 +16,7 @@ I'm always working on it and the repository will be updated for each courses.
 ### OC-HtmlCss
 * Course : "Apprenez à créer votre site web avec HTML5 et CSS3"
 * URL : https://openclassrooms.com/fr/courses/1603881-apprenez-a-creer-votre-site-web-avec-html5-et-css3
-* Status : In progress
+* Status : Completed
 
 ### OC-JavaScript
 * Course : "Apprenez à coder avec JavaScript"
