@@ -41,4 +41,4 @@ I'm always working on it and the repository will be updated for each courses.
 ### OC-SpringBoot
 * Course : "Construisez des microservices"
 * URL : https://openclassrooms.com/fr/courses/4668056-construisez-des-microservices
-* Status : In Progress
+* Status : Completed
