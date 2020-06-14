@@ -1,3 +1,5 @@
+// Exporter des fonctions
+
 var direBonjour = function() {
     console.log('Bonjour !');
 }
