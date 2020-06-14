@@ -1,32 +1,38 @@
+
+// Appelle le module http
 var http = require('http');
+// Appelle le module url
 var url = require('url');
+// Module qui parse la chaine des paramètres de l'url
 var queryString = require('querystring');
-
-// server.on('request', function(req, res) { });
-var server = http.createServer(function(req, res) {
-
-  res.writeHead(200, {"Content-Type": "text/html"});
-  
-    res.write('Je me connecte au serveur');
-
-
-  res.end();
-});
-
-
-server.on('close', function() { // On écoute l'évènement close
-    console.log('Bye bye !');
-});
-
-server.listen(8080);
-
-server.close();
 
 
 /*
-
+// Crée le serveur
 var server = http.createServer(function(req, res) {
 
+  // Renvoie à l'user le code 200 = OK et renvoie des data html
+  res.writeHead(200, {"Content-Type": "text/html"});
+  // Renvoie à l'user un message
+  res.write('<!DOCTYPE html>'+
+  '<html>'+
+  '    <head>'+
+  '        <meta charset="utf-8" />'+
+  '        <title>Ma page Node.js !</title>'+
+  '    </head>'+ 
+  '    <body>'+
+  '     	<p>Bienvenue sur le serveur</p>'+
+  '    </body>'+
+  '</html>');
+  // Fin de la réponse
+  res.end();
+});
+*/
+
+// Renvoie une réponse en fonction des paramètres
+var server = http.createServer(function(req, res) {
+
+  // Renvoie un tableau de paramètres
   var params = queryString.parse(url.parse(req.url).query);
 
   res.writeHead(200, {"Content-Type": "text/html"});
@@ -42,6 +48,17 @@ else {
 });
 
 
+// server.on('request', function(req, res) { });
+server.on('close', function() { // On écoute l'évènement close
+    console.log('Bye bye !');
+});
+
+server.listen(8080);
+
+//server.close();
+
+/*
+// Récupérer la page et afficher un message distinct
 var server = http.createServer(function(req, res) {
     var page = url.parse(req.url).pathname;
     var params = querystring.parse(url.parse(req.url).query);
