@@ -1,4 +1,5 @@
 import { Component, OnInit, Input, Output } from '@angular/core';
+import { getCurrencySymbol } from '@angular/common';
 
 @Component({
   selector: 'app-post-list-item-component',
@@ -27,6 +28,17 @@ export class PostListItemComponentComponent implements OnInit {
     console.log("Actual " + this.postLikes);
     this.postLikes--;
     console.log("Actual " + this.postLikes);
+  }
+
+  getColor() {
+
+    if(this.postLikes > 0){
+      return "green";
+    }
+    else if(this.postLikes < 0) {
+      return "red";
+    }
+
   }
   
 

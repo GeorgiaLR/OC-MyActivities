@@ -1,13 +1,17 @@
 <li class="list-group-item">
-    <div class="container-fluid"></div>
-    <div class="row">
-        <div class="col-md-2">    
-        <div>
-                <p> <button class="btn" (click)="onLike()"><span class="glyphicon glyphicon-thumbs-up"></span></button>
-                   <span>{{postLikes}}</span> </p>
-                </div>
+    <div class="container-fluid">
+        <div class="row">
+            <div class="col-md-1">    
+                    <div>
+                    <p> <button class="btn" (click)="onLike()"><span class="glyphicon glyphicon-thumbs-up"></span></button>
+                    </div>
+                    <div>
+                        <p><button class="btn" (click)="onDisLike()"><span class="glyphicon glyphicon-thumbs-down"></span></button></p>
+                    </div>
+            </div>
+            <div class="col-md-1">    
                 <div>
-                    <p><button class="btn" (click)="onDisLike()"><span class="glyphicon glyphicon-thumbs-down"></span></button></p>
+                <p> <span [ngStyle]="{color: getColor()}">{{postLikes}}</span> </p>
                 </div>
             </div>
             <div class="col-md-10">
@@ -16,7 +20,7 @@
                     <div class="col-md-4"><p>{{ postDate | date }}</p></div>
                 </div>
             <p>{{ postContent }}</p>
+            </div>
         </div>
     </div>
-    
 </li>

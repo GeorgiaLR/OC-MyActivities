@@ -1,47 +1,22 @@
-import { Component } from '@angular/core';
+import { Component, OnInit } from '@angular/core';
+import { PostService, POSTS } from './services/post.service';
 
 @Component({
   selector: 'app-root',
   templateUrl: './app.component.html',
   styleUrls: ['./app.component.scss']
 })
-export class AppComponent {
+export class AppComponent implements OnInit {
   public title = 'georgialr-blog';
 
-  public posts : Array<POSTS> = [
-    {
-      title: "Installer Angular",
-      content: "npm install -g @angular/cli",
-      loveIts: 0,
-      created_at: new Date()
-    },
-    {
-      title: "Créer son projet Angular",
-      content: "ng new mon-projet-angular --style=scss --skip-tests=true",
-      loveIts: 0,
-      created_at: new Date()
-    },
-    {
-      title: "Créer un composant",
-      content: "ng generate component mon-premier",
-      loveIts: 0,
-      created_at: new Date()
-    },
-    {
-      title: "Lancer son application",
-      content: "ng serve",
-      loveIts: 0,
-      created_at: new Date()
-    }
-  ];
+  posts: any[];
 
+  constructor(private postService: PostService) {
+    
+  }
 
+  ngOnInit() {
+    this.posts = this.postService.posts;
+  }
 
-}
-
-export class POSTS {
-  public title: string;
-  public content: string;
-  public loveIts: number;
-  public created_at: Date;
 }
