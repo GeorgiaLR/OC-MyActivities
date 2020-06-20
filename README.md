@@ -33,10 +33,10 @@ I'm always working on it and the repository will be updated for each courses.
 * URL : https://openclassrooms.com/fr/courses/3504441-introduction-a-jquery 
 * Status : Completed
 
-### OC-nodejs
+### OC-Nodejs
 * Course : "Des applications ultra-rapides avec node.js"
 * URL : https://openclassrooms.com/fr/courses/1056721-des-applications-ultra-rapides-avec-node-js/1057142-une-premiere-application-avec-node-js  
-* Status : In Progress
+* Status : Completed
 
 ### OC-SpringBoot
 * Course : "Construisez des microservices"
